@@ -6,8 +6,6 @@ import streamlit as st
 
 alt.data_transformers.disable_max_rows()
 
-source = data.cars()
-
 user = st.sidebar.selectbox(
         "Who do you want to analyze?", ["Mork", "Artur", "Attila", "Tristan"])
 # song_data = pd.read_csv(f'data/{user}_detailed.csv')
