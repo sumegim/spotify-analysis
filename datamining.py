@@ -4,8 +4,6 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
-from vega_datasets import data
-
 alt.data_transformers.disable_max_rows()
 
 source = data.cars()
