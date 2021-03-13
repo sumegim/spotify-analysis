@@ -4,10 +4,14 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
+from vega_datasets import data
+
 alt.data_transformers.disable_max_rows()
 
+source = data.cars()
+
 user = st.sidebar.selectbox(
-        "Who do you want to analyze?", ["Mork", "Artur", "Attila", "Tristan"])
+        "Who do you want to analyze?", ["Mork", "Artur", "Attila", "Tristan", "Mesi", "David"])
 # song_data = pd.read_csv(f'data/{user}_detailed.csv')
 if user == "Tristan" or user == "Mork":
     song_data = pd.read_csv(f'data/{user}_albumtracks.csv')
